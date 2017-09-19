@@ -273,14 +273,14 @@ function createNewUser(newUser , newGame , word , senderID , dataObj  ) {
 
 
 
-
+ // guess the new random
  function getNumber(){
 
    var number = "" ;
   do {
    number = "" ;
    number +=  Math.random()  ;
- } while (number.length < 6 );
+ } while (number.length < 6 );   // in case the number less than 0.1234
 
 
 
@@ -300,7 +300,7 @@ function createNewUser(newUser , newGame , word , senderID , dataObj  ) {
 
 
 
- function getNumberInPlaces( number,   guess){
+ function getNumberInPlaces( number,   guess){ 
    var ans =  0 ;
    for(var i = 0 ; i  < number.length ;  ++i){
        if(number.charAt(i) === guess.charAt(i)){
